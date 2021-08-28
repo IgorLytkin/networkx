@@ -2,7 +2,7 @@ import networkx as nx
 import matplotlib
 
 
-def tutorial():
+def main():
     G = nx.Graph()
     G.add_node(1)
     G.add_nodes_from([2, 3])
