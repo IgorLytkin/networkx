@@ -2,6 +2,8 @@
 import matplotlib
 import networkx as nx
 #  import matplotlib.pyplot as plt
+from networkx import Graph
+
 
 def main():
     g: Graph = nx.Graph()
@@ -26,9 +28,9 @@ def main():
 
     from networkx.algorithms import bipartite
     B = nx.Graph()
-    B.add_nodes_from(['A','B','C','D','E'],bipartite=0)
-    B.add_nodes_from([1,2,3,4],bipartite=1)
-    B.add_edges_from([('A',1),('B',1),('C',1),('C',3),('D',4),('E',1),('A',2),('E',2)])
+    B.add_nodes_from(['A', 'B', 'C', 'D', 'E'], bipartite=0)
+    B.add_nodes_from(bipartite=1, [1, 2, 3, 4])
+    B.add_edges_from([('A', 1), ('B', 1), ('C', 1), ('C', 3), ('D', 4), ('E', 1), ('A', 2), ('E', 2)])
     bipartite.is_bipartite(B)
 
     edges = B.edges()
